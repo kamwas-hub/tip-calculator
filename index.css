@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Space Mono", monospace;
+    box-sizing: border-box;
+}
+:root{
+    --Green400: hsl(172, 67%, 45%);
+    --Green900: hsl(183, 100%, 15%);
+    --Grey500: hsl(186, 14%, 43%);
+    --Grey400: hsl(184, 14%, 56%);
+    --Grey200: hsl(185, 41%, 84%);
+    --Grey50: hsl(189, 47%, 97%);
+    --White: hsl(0, 100%, 100%);
+}
+body{
+    font-size: 24px;
+    background: var(--Grey200);
+}
+.container{
+    width: 80%;
+    margin: 5% auto;
+    text-align: center;
+}
+.container-wrapper{
+    background: var(--White);
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    display: flex;
+    gap: 1rem;
+}
+.container-left,.container-right{
+    flex: 1;
+    text-align: left;
+}
+.container-right{
+    background: var(--Green900);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+label{
+    font-weight: 700;
+    color: var(--Grey500);
+}
+input{
+    width: 100%;
+    margin: 0.5rem 0;
+    font-size: 24px;
+    padding: 0.3rem 0.7rem;
+    outline: none;
+    background: var(--Grey50);
+    border: none;   
+    border-radius: 0.3rem;
+    text-align: end;
+    cursor: pointer;
+}
+input:hover,input:focus{
+    border: 2px solid var(--Green400);
+}
+input.invalid{
+    border: 2px solid crimson;
+}
+.input-wrapper{
+    position: relative;
+    margin-top: 2rem;
+}
+.input-wrapper > img{
+   position: absolute;
+   left: 0;
+   top: 3rem;
+   left: 1rem;
+}
+.select-btn{
+    margin: 0.7rem 0;   
+}
+button{
+    width: 30%;
+    padding: 0.3rem 0.7rem;
+    margin: 0.5rem 0;
+    background: var(--Green900);
+    color: var(--White);
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 24px;
+    cursor: pointer;
+}
+button:hover{
+    background: var(--Green400);
+    color: var(--Green900);
+    font-weight: 700;
+}
+.select-btn-content > input{
+    width: 30%;  
+}
+.tip-amount{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+.tip h4{
+    color: var(--White);
+}
+.tip p{
+    color: var(--Grey400) ;
+}
+.dollar h1{
+    color: var(--Green400);
+
+}
+.total{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+.tip-total h4{
+    color: var(--White);
+}
+.tip-total p{
+    color: var(--Grey400) ;
+}
+.dollar-total h1{
+    color: var(--Green400);
+}
+.container-right button{
+    width: 100%;
+    margin-top: 5rem;
+    background: var(--Grey500);
+    color: var(--Green900); 
+    opacity: 0.8;   
+}
+.container-right button:hover{
+    background: var(--Green400);
+    color: var(--White);
+}
+.input-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.error{
+    color: crimson;
+    font-weight: 700;
+}
+@media (min-width: 701px) and (max-width: 900px){
+    .container{
+        width: 95%;
+    }
+}
+@media(max-width: 700px){
+    .container{
+        width: 100%;
+        margin: 15% 0;
+    }
+    .container-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .logo{
+        margin-top: 2rem;
+    }
+    .select-btn-content > input{
+        width: 48%;  
+    }
+    button{
+        width: 45%;
+    }
+    .container-right{
+        margin-top: 1rem;
+    }
+    h1{
+        font-size: 32px;
+    }
+    .container-right button{
+        margin-top: 20%;
+    }
+}
